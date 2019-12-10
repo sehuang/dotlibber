@@ -118,7 +118,7 @@ class Library:
 		header += "capacitive_load_unit (1,ff);\n"
 		header += "voltage_unit : \"1V\";\n"
 		header += "current_unit : \"1mA\";\n"
-		header += "time_unit : \"1ns\";\n"
+		header += "time_unit : \"1ps\";\n"
 		header += "pulling_resistance_unit : \"1kohm\";\n"
 		header += corner.emit()
 		output += indent(header)
