@@ -76,7 +76,7 @@ class Corner:
 
 class Library:
 
-	def __init__(self, attr, corners, library_namer=default_library_namer, characterizer=default_characterizer):
+	def __init__(self, attr, corners, library_namer=default_library_namer, characterizer=default_characterizer, options=None):
 		self.attr = attr
 		self.name = get_name(self)
 		self.datetime = datetime.now().strftime("%c")
@@ -95,6 +95,9 @@ class Library:
 		self.bus_types = {}
 		for a in self.attr["cells"]:
 			self.add_cell(a, self.bus_types)
+		if not options:
+			self.options={'delay_model': 'table_lookup',
+						  }
 
 	def voltage_names(self):
 		return self.corners[0].voltage_map.keys()
