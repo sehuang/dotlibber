@@ -126,7 +126,7 @@ class Library:
         header += "delay_model : %s;\n" % self.options['delay_model']
         header += "simulation : %s;\n" % self.options['simulation']
         # Unit specifications
-        header += "capacitive_load_unit : %s;\n" % self.options['capacitive_load_unit']
+        header += "capacitive_load_unit %s;\n" % self.options['capacitive_load_unit']
         header += "voltage_unit : \"%s\";\n" % self.options['voltage_unit']
         header += "current_unit : \"%s\";\n" % self.options['current_unit']
         header += "time_unit : \"%s\";\n" % self.options['time_unit']
